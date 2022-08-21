@@ -2,18 +2,17 @@ package top.catoy.springbootsample.controller;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
 
 @RestController
-@RequestMapping("/api")
-public class TestController {
+@RequestMapping("/")
+public class TestController2 {
     @GetMapping("hello")
     public String hello1() {
-        return "hello world!1111";
+        return "hello world!2222";
     }
 
     public static class Student {
