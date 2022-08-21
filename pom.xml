@@ -12,6 +12,7 @@
     <groupId>top.catoy</groupId>
     <artifactId>springboot-sample</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
     <name>springboot-sample</name>
     <description>Demo project for Spring Boot</description>
     <properties>
