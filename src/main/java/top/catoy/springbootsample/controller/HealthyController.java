@@ -9,7 +9,7 @@ import java.util.Date;
 
 @RestController
 @RequestMapping("/")
-public class TestController3 {
+public class HealthyController {
     @GetMapping
     public String hello1() {
         return "hello world!1111";

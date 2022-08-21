@@ -10,7 +10,7 @@ import java.util.Date;
 
 @RestController
 @RequestMapping("/api")
-public class TestController {
+public class HelloController {
     @GetMapping("hello")
     public String hello1() {
         return "hello world!1111";
