@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Date;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/")
 public class TestController {
-    @GetMapping("test")
-    public Student hello1() {
-        return null;
+    @GetMapping
+    public String hello1() {
+        return "hello world!";
     }
 
     public static class Student {
