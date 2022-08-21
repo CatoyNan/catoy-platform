@@ -9,11 +9,13 @@ ACTION=$1
 APP_START_TIMEOUT=20    # 等待应用启动的时间
 APP_PORT=8080          # 应用端口
 HEALTH_CHECK_URL=http://127.0.0.1:${APP_PORT}  # 应用健康检查URL
+HEALTH_CHECK_FILE_DIR=/home/admin/status   # 脚本会在这个目录下生成nginx-status文件
 APP_HOME=/home/admin/${APP_NAME} # 从package.tgz中解压出来的jar包放到这个目录下
-JAR_NAME=${APP_HOME}/target/${APP_NAME}.jar # jar包的名字
+JAR_NAME=${APP_HOME}/${APP_NAME}.jar # jar包的名字
 JAVA_OUT=${APP_HOME}/logs/start.log  #应用的启动日志
 
 # 创建出相关目录
+mkdir -p ${HEALTH_CHECK_FILE_DIR}
 mkdir -p ${APP_HOME}
 mkdir -p ${APP_HOME}/logs
 usage() {
@@ -55,7 +57,7 @@ start_application() {
 
 stop_application() {
    checkjavapid=`ps -ef | grep java | grep ${APP_NAME} | grep -v grep |grep -v 'deploy.sh'| awk '{print$2}'`
-
+   
    if [[ ! $checkjavapid ]];then
       echo -e "\rno java process"
       return
