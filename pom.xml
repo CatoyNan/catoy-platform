@@ -13,7 +13,7 @@
     <artifactId>catoy-platform</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <modules>
-        <module>catoy-platfrom-music</module>
+        <module>catoy-platform-music</module>
     </modules>
     <packaging>pom</packaging>
     <name>catoy-platform</name>
