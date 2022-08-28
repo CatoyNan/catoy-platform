@@ -12,7 +12,7 @@ import java.util.Date;
 public class HealthyController {
     @GetMapping
     public String healthy() {
-        return "hello world!1111";
+        return "hello world!222";
     }
 
     public static class Student {
